@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Staff CS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Halaman login -->
+    <h1>Login Staff CS</h1>
+    <form id="loginForm">
+      <div class="check"></div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" required />
+      <label for="password">Password:</label>
+      <input type="password" id="password" required />
+      <button type="submit">Login</button>
+      <p>Copyright Summarecon Serpong</p>
+      <p>Allright Reserved</p>
+      </div>
+    </form>
+    <!-- Logic buat login form nya -->
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          // Validasi
+          if (username === "staff2" && password === "admin2") {
+            alert("Login berhasil");
+            window.location.href = "form.html"; // Arahkan ke halaman utama setelah login
+          } else {
+            alert("Username atau password salah");
+          }
+        });
+    </script>
+  </body>
+</html>

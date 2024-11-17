@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Keluhan Pelayanan</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Jenis Pelayanan</h1>
+    <form id="keluhanForm">
+      <!-- Ini daftar checkbox Jenis Pelayanannya -->
+
+      <label><input type="checkbox" name="keluhan" value="PPL" /> PPL</label>
+      <label><input type="checkbox" name="keluhan" value="PAM" /> PAM</label>
+      <label
+        ><input type="checkbox" name="keluhan" value="Pengajuan Renovasi" />
+        Pengajuan Renovasi</label
+      >
+      <label
+        ><input type="checkbox" name="keluhan" value="Pengajuan Izin Kerja" />
+        Pengajuan Izin Kerja</label
+      >
+      <label
+        ><input type="checkbox" name="keluhan" value="Akses Card" /> Akses
+        Card</label
+      >
+      <label
+        ><input type="checkbox" name="keluhan" value="Member Club" /> Member
+        Club</label
+      >
+      <label
+        ><input type="checkbox" name="keluhan" value="Kartu Worker" /> Kartu
+        Worker</label
+      >
+      <label
+        ><input
+          type="checkbox"
+          name="keluhan"
+          value="Ganti Nama/Data Pemilik"
+        />
+        Ganti Nama/Data Pemilik</label
+      >
+      <label
+        ><input type="checkbox" name="keluhan" value="Izin Pindahan" /> Izin
+        Pindahan</label
+      >
+      <label
+        ><input type="checkbox" name="keluhan" value="Izin Keramaian" /> Izin
+        Keramaian</label
+      >
+      <label
+        ><input type="checkbox" name="keluhan" value="Komplain/Keluhan" />
+        Komplain/Keluhan</label
+      >
+      <label
+        ><input type="checkbox" name="keluhan" value="Izin Lembur" /> Izin
+        Lembur</label
+      >
+      <label
+        ><input type="checkbox" name="keluhan" value="Sewa Mini Club" /> Sewa
+        Mini Club</label
+      >
+      <label
+        ><input type="checkbox" name="keluhan" value="Sewa Parkland" /> Sewa
+        Parkland</label
+      >
+      <label
+        ><input type="checkbox" name="keluhan" value="Izin Syuting Kawasan" />
+        Izin Syuting Kawasan</label
+      >
+      <label
+        ><input type="checkbox" name="keluhan" value="Izin Galian/Pihak ke-3" />
+        Izin Galian/Pihak ke-3</label
+      >
+      <label
+        ><input type="checkbox" name="keluhan" value="Desain Mandiri" /> Desain
+        Mandiri</label
+      >
+      <button type="submit">Kirim</button>
+    </form>
+    <!-- Filter data berdasarkan tanggal dan jam-->
+    <h2>Filter Rekap Data</h2>
+    <div class="date">
+      <label for="startDate">Tanggal Mulai:</label>
+      <input type="date" id="startDate" />
+      <label for="endDate">Tanggal Akhir:</label>
+      <input type="date" id="endDate" />
+      <label for="startTime">Jam Mulai:</label>
+      <input type="time" id="startTime" />
+      <label for="endTime">Jam Akhir:</label>
+      <input type="time" id="endTime" />
+      <button onclick="filterData()">Lihat Rekap</button>
+      <button onclick="exportToExcel()">Ekspor ke Excel</button>
+    </div>
+    <!-- Hasil rekap data -->
+    <div id="rekapTable"></div>
+    <div id="totalSummary"></div>
+    <div id="totalRecords"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
